@@ -14,6 +14,8 @@
 - Target: Windows machine
 - Attacker: Kali Linux
 - Tools: nmap, metasploit, John The Ripper
+- [link to challenge](https://tryhackme.com/room/blue)
+- [link to badge](https://tryhackme.com/Andurin/badges/blue?utm_campaign=social_share&utm_medium=social&utm_content=badge&utm_source=copy&sharerId=661a71c1f4b4f33e37b3307b)
 
 ---
 
