@@ -19,23 +19,23 @@
 
 ## 🔎 Reconnaissance
 
-We first started off with a NMAP scan to the victim's IP address using "nmap -sS 10.48.185.197" which provided us with the open ports on the victim system. From this we were able to determine that the port 3389 was open and vulnerable but more importantly port 139 was open which we could exploit with EternalBlue.
+We first started off with a NMAP scan to the victim's IP address using **"nmap -sS 10.48.185.197"** which provided us with the open ports on the victim system. From this we were able to determine that the port 3389 was open and vulnerable but more importantly port 139 was open which we could exploit with EternalBlue.
 
 ---
 
 ## Staging and initial entry
 
-At this point we started up Metasploit in the terminal. We used "search ms17-010" to find the exploit. We then reviewed what parameters needed to be set via the "show info" command. From this we only had to set the RHOSTS value to the victims IP address which we did with "set RHOSTS 10.48.185.197.
+At this point we started up Metasploit in the terminal. We used **"search ms17-010"** to find the exploit. We then reviewed what parameters needed to be set via the "show info" command. From this we only had to set the RHOSTS value to the victims IP address which we did with **"set RHOSTS 10.48.185.197"**.
 
-After this we entered the "run" command to start the exploit which succesfully intiated a meterpreter session on the victim machine. The challenge did further describe how to turn a shell into a Meterpreter session but as this was already a Meterpreter session there was no further need for this.
+After this we entered the **"run"** command to start the exploit which succesfully intiated a meterpreter session on the victim machine. The challenge did further describe how to turn a shell into a Meterpreter session but as this was already a Meterpreter session there was no further need for this.
 
 ---
 
-## Exploitation
+## 💥 Exploitation
 
-One of the objectives of the challenge was to obtain the password for the user "Jon". We first migrated to the lsass service by using "migrate 716". Once done we used the "hasdump" command to get the password hash. We then placed the hash in a .txt file
+One of the objectives of the challenge was to obtain the password for the user "Jon". We first migrated to the lsass service by using **"migrate 716"**. Once done we used the **"hashdump"** command to get the password hash. We then placed the hash in a .txt file
 
-To crack the password we used John The Ripper with the rockyou.txt wordlist to crack the password. We used the following command "john --wordlist=/usr/share/wordlists/rockyou.txt format=nt password.txt to obtain the password.
+To crack the password we used John The Ripper with the rockyou.txt wordlist to crack the password. We used the following command **"john --wordlist=/usr/share/wordlists/rockyou.txt format=nt password.txt"** to obtain the password.
 
 ## Remaining System Flags
 
