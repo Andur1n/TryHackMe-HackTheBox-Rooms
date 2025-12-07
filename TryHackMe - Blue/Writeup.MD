@@ -1,23 +1,4 @@
 ## Blue - ms17-010 Exploitation
-         .                                         .
- .
-
-      dBBBBBBb  dBBBP dBBBBBBP dBBBBBb  .                       o
-       '   dB'                     BBP
-    dB'dB'dB' dBBP     dBP     dBP BB
-   dB'dB'dB' dBP      dBP     dBP  BB
-  dB'dB'dB' dBBBBP   dBP     dBBBBBBB
-
-                                   dBBBBBP  dBBBBBb  dBP    dBBBBP dBP dBBBBBBP
-          .                  .                  dB' dBP    dB'.BP
-                             |       dBP    dBBBB' dBP    dB'.BP dBP    dBP
-                           --o--    dBP    dBP    dBP    dB'.BP dBP    dBP
-                             |     dBBBBP dBP    dBBBBP dBBBBP dBP    dBP
-
-                                                                    .
-                .
-        o                  To boldly go where no
-                            shell has gone before
 
 ## 🎯 Objectives
 - Identify vulnerabilities on a Windows machine
