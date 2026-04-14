@@ -73,7 +73,7 @@ Action: Deny`
 
 ✔ Second flag captured
 
-## Sample 3 – DNS-Based Command & Control Blocking
+## 🧪 Sample 3 – DNS-Based Command & Control Blocking
 
 The third sample (sample3.exe) demonstrated advanced malicious behaviour including payload retrieval.
 
@@ -97,7 +97,7 @@ Action: Deny`
 
 ✔ Third flag captured
 
-## Sample 4 – Registry-Based Defense Evasion
+## 🧪 Sample 4 – Registry-Based Defense Evasion
 
 The fourth sample (sample4.exe) focused on system-level manipulation and persistence techniques.
 
@@ -130,7 +130,7 @@ Value: txtfile`
 
 ✔ Fourth flag captured
 
-## Sample 5 – Beaconing Behaviour Detection (Sigma Rule)
+## 🧪 Sample 5 – Beaconing Behaviour Detection (Sigma Rule)
 
 The fifth sample was provided as a log file showing repeating network patterns.
 
@@ -152,7 +152,7 @@ MITRE ATT&CK: TA0011 (Command & Control)`
 
 ✔ Fifth flag captured
 
-##  Sample 6 – Data Exfiltration via Command Execution
+## 🧪 Sample 6 – Data Exfiltration via Command Execution
 
 The final sample contained a command script used for system reconnaissance and data collection.
 
@@ -161,11 +161,13 @@ The final sample contained a command script used for system reconnaissance and d
 
 ## 📌 Commands Used by Attacker
 
-Directory enumeration (dir)
+`Directory enumeration (dir)
 Privilege enumeration (net localgroup administrator)
 System information (systeminfo, ver)
 Network enumeration (ipconfig /all, netstat -ano)
-Service enumeration (net start)
+Service enumeration (net start)`
+
+All these commands clearly point at it obtaining and exfiltrating system information by storing it in a temporary file.
 
 ## 🛡️ Sigma Rule
 `Detection Type: File Creation / Modification
